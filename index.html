@@ -1,0 +1,234 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+	<style>
+		.demo-layout-transparent .mdl-layout__header,
+		.demo-layout-transparent .mdl-layout__drawer-button {
+			color: black;
+		}
+		.custom-footer{
+			background-color: #549788;
+			width: 100%;
+			height: 82px;
+			position: fixed;
+			bottom: 0%;
+			z-index: 999999;
+		}
+		.custom-section{
+			width: 25%;
+			display:table;
+			float: left;
+		}
+		.bottom-features{
+			display:table-cell;
+			text-align: center;
+			padding-top: 15px;
+		}
+		.bottom-features-text{
+			height: 100%;
+			color: #549788;
+			text-align: center;
+		}
+		.top{
+			width: 100%;
+			height: 60px;
+		}
+		.bottom{
+			width: 100%;
+			height: 22px;
+			background-color: white;
+		}
+		.material-icons{
+			color: #549788;
+			position: absolute;
+			left: 20px;
+		}
+
+		.mdl-button--colored .material-icons{
+			color: white;
+		}
+		.mdl-layout__drawer-button {
+			width: 100%;
+
+			//margin: 0px;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+			//background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+			//background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+			//background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+		}
+		.mdl-layout__content{
+			/*margin-top: 48px;*/
+		}
+		#spacer_top{
+			height: 48px;
+		}
+
+		.logo_box{
+			margin-top: 32px;
+			width: 100%;
+			display:table;
+			text-align: center;
+			margin-bottom: 52px;
+		}
+		#logo{
+			width: 150px;
+			height: 72px;
+		}
+		hr{
+			 background-color: #ED242E; 
+			 height: 3px; 
+			 border: 0;
+			 margin-left: 16px;
+			 margin-right: 16px;
+			 margin-top: 0px;
+			 margin-bottom: 0px;
+
+		}
+		.mdl-button--colored{
+			position: fixed;
+			right: 10px;
+			bottom: 100px;
+		}
+		.mdl-textfield{
+			width: 100%;
+		}
+		.mdl-textfield__input{
+			border-bottom: 2px solid #B92D00;
+
+		}
+		.form-inputs{
+			display:block;
+			margin: 0 16;
+		}
+		.custom-footer{
+			display: none;
+		}
+
+
+	</style>
+</head>
+<body>
+
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+	<header class="mdl-layout__header mdl-layout__header--transparent">
+		<div class="mdl-layout__header-row">
+		<!-- Title -->
+			<span class="mdl-layout-title">Title</span>
+			<!-- Add spacer, to align navigation to the right -->
+			<div class="mdl-layout-spacer"></div>
+			<!-- Navigation -->
+		</div>
+	</header>
+
+	<div class="mdl-layout__drawer">
+		<span class="mdl-layout-title">Title</span>
+		<nav class="mdl-navigation">
+			<a class="mdl-navigation__link" href="">Link</a>
+			<a class="mdl-navigation__link" href="">Link</a>
+			<a class="mdl-navigation__link" href="">Link</a>
+			<a class="mdl-navigation__link" href="">Link</a>
+		</nav>
+	</div>
+	<main class="mdl-layout__content">
+	
+	<div id = 'spacer_top' class = 'spacer'>
+	</div>
+	<div class="logo_box">
+		<img id='logo' src="./images/logo.png">
+	</div>
+	<hr />
+
+	<div class="form-inputs">
+		<div class="mdl-textfield mdl-js-textfield">
+			<input class="mdl-textfield__input" type="text" id="id">
+			<label class="mdl-textfield__label" for="id">아이디를 입력해주세요</label>
+		</div>
+		<div class="mdl-textfield mdl-js-textfield">
+			<input class="mdl-textfield__input" type="text" id="password">
+			<label class="mdl-textfield__label" for="password">패스워드를 입력해주세요</label>
+		</div>
+	</div>
+	<!--
+	<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+ 		<i class="material-icons">add</i>
+	</button>
+	<p>
+		What is Lorem Ipsum?
+		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+	</p>
+	<p>
+		Why do we use it?
+		It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+	</p>
+	<p>
+		Where does it come from?
+		Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+	</p>
+	<p>
+		The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from .the 1914 translation by H. Rackham.
+	</p>
+	<p>
+		Where can I get some?
+		There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+	</p>
+	-->
+	</main>
+	
+	<footer class="custom-footer">
+		<div class="top">
+			<div class="custom-section">
+				<div class="bottom-features">
+					<image src ="./images/noun_84367_cc.png" />
+				</div>
+			</div>
+			<div class="custom-section">
+				<div class="bottom-features">
+					<image src ="./images/noun_356956_cc.png" />
+				</div>
+			</div>
+			<div class="custom-section">
+				<div class="bottom-features">
+					<image src ="./images/noun_757280_cc.png" />
+				</div>	
+			</div>
+			<div class="custom-section">
+				<div class="bottom-features">
+					<image src ="./images/noun_818881_cc.png" />
+				</div>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="custom-section">
+				<div class="bottom-features-text">
+					작업내역
+				</div>
+			</div>
+			<div class="custom-section">
+				<div class="bottom-features-text">
+					사진보기
+				</div>
+			</div>
+			<div class="custom-section">
+				<div class="bottom-features-text">
+					자료보기
+				</div>
+			</div>
+			<div class="custom-section">
+				<div class="bottom-features-text">
+					통계
+				</div>
+			</div>
+		</div>
+		
+	</footer>
+
+</div>
+
+</body>
+</html>

@@ -87,7 +87,7 @@
 			 margin-left: 16px;
 			 margin-right: 16px;
 			 margin-top: 0px;
-			 margin-bottom: 0px;
+			 margin-bottom: 20px;
 
 		}
 		.mdl-button--colored{
@@ -97,17 +97,41 @@
 		}
 		.mdl-textfield{
 			width: 100%;
+			padding: 0 0;
+			padding-bottom: 20px;
+
 		}
 		.mdl-textfield__input{
-			border-bottom: 2px solid #B92D00;
-
+			border-bottom-color: #B92D00;
+			border-bottom-width: 2px;
+			padding-top: 0px;
+			padding-bottom: 10px;
 		}
 		.form-inputs{
 			display:block;
-			margin: 0 16;
+			margin:0 15;
 		}
 		.custom-footer{
 			display: none;
+		}
+		.mdl-textfield__label{
+			top: 0;
+		}
+		.mdl-js-button{
+			position: static;
+			width: 100%;
+			max-width:500px;
+			margin-bottom: 14px;
+			-webkit-tap-highlight-color: gray;
+		}
+		#sign-in{
+			background-color: white;
+			color: #B92D00;
+			border: #B92D00 solid 1px; 
+		}
+		#error-console{
+			color:#B92D00;
+			margin-bottom: 70px;
 		}
 
 
@@ -150,9 +174,18 @@
 			<label class="mdl-textfield__label" for="id">아이디를 입력해주세요</label>
 		</div>
 		<div class="mdl-textfield mdl-js-textfield">
-			<input class="mdl-textfield__input" type="text" id="password">
+			<input class="mdl-textfield__input" type="password" id="password">
 			<label class="mdl-textfield__label" for="password">패스워드를 입력해주세요</label>
 		</div>
+		<div id="error-console" class="error">
+			사용자 이름이나 패스워드가 정확하지 않습니다.
+		</div>	
+		<button id = "log-in" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+			로그인하기
+		</button>
+		<button id = "sign-in" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+			가입하기
+		</button>
 	</div>
 	<!--
 	<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">

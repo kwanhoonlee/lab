@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
 	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-	<style>
+	<style> <!-- 커스텀 css부분 -->
 		.demo-layout-transparent .mdl-layout__header,
 		.demo-layout-transparent .mdl-layout__drawer-button {
 			color: black;
@@ -138,17 +138,15 @@
 	</style>
 </head>
 <body>
-
+<!-- 헤더 네비게이션 바 -->
 <div class="demo-layout-transparent mdl-layout mdl-js-layout">
 	<header class="mdl-layout__header mdl-layout__header--transparent">
 		<div class="mdl-layout__header-row">
-		<!-- Title -->
 			<span class="mdl-layout-title">Title</span>
-			<!-- Add spacer, to align navigation to the right -->
 			<div class="mdl-layout-spacer"></div>
-			<!-- Navigation -->
 		</div>
 	</header>
+	<!-- 사이드 네비게이션 바 -->
 
 	<div class="mdl-layout__drawer">
 		<span class="mdl-layout-title">Title</span>
@@ -159,15 +157,19 @@
 			<a class="mdl-navigation__link" href="">Link</a>
 		</nav>
 	</div>
+	<!-- 컨텐츠영역 시작 -->
 	<main class="mdl-layout__content">
+	<!-- 헤더 네비게이션 바 크기만큼 공간 추가하는 spacer div -->
 	
 	<div id = 'spacer_top' class = 'spacer'>
 	</div>
+	<!-- 로고영역 -->
 	<div class="logo_box">
 		<img id='logo' src="./images/logo.png">
 	</div>
+	<!-- 가로 선-->
 	<hr />
-
+	<!-- 아이디 비번 로그인 폼 -->
 	<div class="form-inputs">
 		<div class="mdl-textfield mdl-js-textfield">
 			<input class="mdl-textfield__input" type="text" id="id">
@@ -180,39 +182,18 @@
 		<div id="error-console" class="error">
 			사용자 이름이나 패스워드가 정확하지 않습니다.
 		</div>	
+		<!-- 로그인 버튼-->
+
 		<button id = "log-in" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
 			로그인하기
 		</button>
+		<!-- 가입 버튼-->
 		<button id = "sign-in" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
 			가입하기
 		</button>
 	</div>
-	<!--
-	<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
- 		<i class="material-icons">add</i>
-	</button>
-	<p>
-		What is Lorem Ipsum?
-		Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-	</p>
-	<p>
-		Why do we use it?
-		It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-	</p>
-	<p>
-		Where does it come from?
-		Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-	</p>
-	<p>
-		The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from .the 1914 translation by H. Rackham.
-	</p>
-	<p>
-		Where can I get some?
-		There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
-	</p>
-	-->
 	</main>
-	
+	<!--하단영역 기능키 display:none으로 숨겨놓음-->
 	<footer class="custom-footer">
 		<div class="top">
 			<div class="custom-section">

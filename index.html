@@ -120,7 +120,7 @@
 		.mdl-js-button{
 			position: static;
 			width: 100%;
-			max-width:500px;
+			max-width:50em;
 			margin-bottom: 14px;
 			-webkit-tap-highlight-color: gray;
 		}
@@ -133,8 +133,14 @@
 			color:#B92D00;
 			margin-bottom: 70px;
 		}
-
-
+		#button-area{
+			display:table-cell;
+			text-align: center;
+		}
+		#button{
+			margin: 0 auto;
+		}
+	
 	</style>
 </head>
 <body>
@@ -159,39 +165,41 @@
 	</div>
 	<!-- 컨텐츠영역 시작 -->
 	<main class="mdl-layout__content">
-	<!-- 헤더 네비게이션 바 크기만큼 공간 추가하는 spacer div -->
-	
-	<div id = 'spacer_top' class = 'spacer'>
-	</div>
-	<!-- 로고영역 -->
-	<div class="logo_box">
-		<img id='logo' src="./images/logo.png">
-	</div>
-	<!-- 가로 선-->
-	<hr />
-	<!-- 아이디 비번 로그인 폼 -->
-	<div class="form-inputs">
-		<div class="mdl-textfield mdl-js-textfield">
-			<input class="mdl-textfield__input" type="text" id="id">
-			<label class="mdl-textfield__label" for="id">아이디를 입력해주세요</label>
+		<!-- 헤더 네비게이션 바 크기만큼 공간 추가하는 spacer div -->
+		
+		<div id = 'spacer_top' class = 'spacer'>
 		</div>
-		<div class="mdl-textfield mdl-js-textfield">
-			<input class="mdl-textfield__input" type="password" id="password">
-			<label class="mdl-textfield__label" for="password">패스워드를 입력해주세요</label>
+		<!-- 로고영역 -->
+		<div class="logo_box">
+			<img id='logo' src="./images/logo.png">
 		</div>
-		<div id="error-console" class="error">
-			사용자 이름이나 패스워드가 정확하지 않습니다.
-		</div>	
-		<!-- 로그인 버튼-->
-
-		<button id = "log-in" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-			로그인하기
-		</button>
-		<!-- 가입 버튼-->
-		<button id = "sign-in" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-			가입하기
-		</button>
-	</div>
+		<!-- 가로 선-->
+		<hr />
+		<!-- 아이디 비번 로그인 폼 -->
+		<div class="form-inputs">
+			<div class="mdl-textfield mdl-js-textfield">
+				<input class="mdl-textfield__input" type="text" id="id">
+				<label class="mdl-textfield__label" for="id">아이디를 입력해주세요</label>
+			</div>
+			<div class="mdl-textfield mdl-js-textfield">
+				<input class="mdl-textfield__input" type="password" id="password">
+				<label class="mdl-textfield__label" for="password">패스워드를 입력해주세요</label>
+			</div>
+			<div id="error-console" class="error">
+				사용자 이름이나 패스워드가 정확하지 않습니다.
+			</div>	
+			<div class="button-area">
+				<!-- 로그인 버튼-->
+				<button id = "log-in" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+					로그인하기
+				</button>
+				<!-- 가입 버튼-->
+				<button id = "sign-in" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+					가입하기
+				</button>
+				</div>
+			</div>
+		</div>
 	</main>
 	<!--하단영역 기능키 display:none으로 숨겨놓음-->
 	<footer class="custom-footer">

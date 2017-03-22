@@ -5,6 +5,8 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
 	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
 	<style> <!-- 커스텀 css부분 -->
 		.demo-layout-transparent .mdl-layout__header,
@@ -140,7 +142,41 @@
 		#button{
 			margin: 0 auto;
 		}
-	
+
+		#side-top{
+			left: 220px;
+			color: white;
+		}
+		#side-title{
+			height: 230px;
+			background-color: #549788;
+		}
+		#side-bar{
+			width: 250px;
+		}
+		#side-id-info{
+			height: 120px;
+			padding: 0px;
+		}
+		#side-search{
+			height: 67px;
+			
+		}
+		
+		#side-list{
+			padding: 0px;
+		}
+		.side-list-span{
+			 padding-left: 70px;
+		}
+		.side-list-img{
+			position : absolute ; left :32px; margin-top: -3px
+		}
+		.mdl-navigation__link{
+			border-bottom-style: solid;
+    			border-bottom-color: lightgrey;
+    			border-bottom-width: 1px;
+		}
 	</style>
 </head>
 <body>
@@ -148,19 +184,80 @@
 <div class="demo-layout-transparent mdl-layout mdl-js-layout">
 	<header class="mdl-layout__header mdl-layout__header--transparent">
 		<div class="mdl-layout__header-row">
+
 			<span class="mdl-layout-title">Title</span>
+
 			<div class="mdl-layout-spacer"></div>
+
 		</div>
 	</header>
 	<!-- 사이드 네비게이션 바 -->
 
-	<div class="mdl-layout__drawer">
-		<span class="mdl-layout-title">Title</span>
-		<nav class="mdl-navigation">
-			<a class="mdl-navigation__link" href="">Link</a>
-			<a class="mdl-navigation__link" href="">Link</a>
-			<a class="mdl-navigation__link" href="">Link</a>
-			<a class="mdl-navigation__link" href="">Link</a>
+	<div class="mdl-layout__drawer" id = "side-bar">
+	<div id = "side-title">
+		<span class="mdl-layout-title" >
+		<button id="demo-menu-lower-right"
+		       	 class="mdl-button mdl-js-button mdl-button--icon">
+		  	<i class="material-icons" id = "side-top">more_vert</i>
+		</button>
+
+		<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+		    for="demo-menu-lower-right">
+		  <li class="mdl-menu__item">Some Action</li>
+		  <li class="mdl-menu__item">Another Action</li>
+		  <li disabled class="mdl-menu__item">Disabled Action</li>
+		  <li class="mdl-menu__item">Yet Another Action</li>
+		</ul>
+		</span>
+
+		<div id = "side-id-info"> 
+			<img src="./images/Path 54.png"/ style="position : absolute ; left :26px;
+			margin-top: 18px">
+
+			<p style="position : relative ; left :102px; font-size :17px; top : 26px;
+			 color :white"> 유무영 </p>
+			<p style="position :relative ; left :102px; font-size :13px; 
+			top : 9px; color :white"> MSoft - 관리자 </p>
+		</div>
+		<div id = "side-search">
+			<img src="./images/ic_search.png"/ style="position : absolute ; left :11px;
+			margin-top: 5px">
+
+			<img src="./images/ui_searchField_inset.png"/ style="position : absolute ; left :38px;
+			margin-top: 0px">
+			<img src="./images/ic_mic.png"/ style="position : absolute ; left :202px;
+			margin-top: 5px">
+			<img src="./images/ui_search_items.png"/ style="position : absolute ; left :52px;
+			margin-top: 8px">
+
+		</div>
+
+	</div>
+		<nav class="mdl-navigation" id = "side-list">
+			<a class="mdl-navigation__link" href="" > 
+				<img src="./images/noun_148556_cc.png"/ class = "side-list-img"> 
+				<span class ="side-list-span">회사정보</span>
+			</a>
+				<img src="./images/ic_chevron_right.png"/ style="position : absolute ; right :18px;margin-top: 14px">
+
+			<a class="mdl-navigation__link" href="">
+				<img src="./images/noun_561365_cc.png"/ class = "side-list-img">
+
+				<span class = "side-list-span" >개인정보</span>
+			</a>
+				<img src="./images/ic_chevron_right.png"/ style="position : absolute ; right :18px;margin-top: 70px">
+
+			<a class="mdl-navigation__link" href="">
+				<img src="./images/noun_542379_cc.png"/ class = "side-list-img">
+				<span class = "side-list-span" >이용약관</span>
+			</a>
+				<img src="./images/ic_chevron_right.png"/ style="position : absolute ; right :18px;margin-top: 127px">
+
+			<a class="mdl-navigation__link" href="">
+				<img src="./images/noun_638526_cc.png"/ class = "side-list-img">
+				<span class = "side-list-span" >로그아웃</span>
+			</a>
+				<img src="./images/ic_chevron_right.png"/ style="position : absolute ; right :18px;margin-top: 182px">
 		</nav>
 	</div>
 	<!-- 컨텐츠영역 시작 -->

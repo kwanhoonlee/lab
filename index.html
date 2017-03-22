@@ -1,0 +1,300 @@
+<html ng-app="msoftApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+    <style> <!-- 커스텀 css부분 -->
+    .demo-layout-transparent .mdl-layout__header,
+    .demo-layout-transparent .mdl-layout__drawer-button {
+        color: black;
+    }
+    .custom-footer{
+        background-color: #549788;
+        width: 100%;
+        height: 82px;
+        position: fixed;
+        bottom: 0%;
+        z-index: 999999;
+    }
+    .custom-section{
+        width: 25%;
+        display:table;
+        float: left;
+    }
+    .bottom-features{
+        display:table-cell;
+        text-align: center;
+        padding-top: 15px;
+    }
+    .bottom-features-text{
+        height: 100%;
+        color: #549788;
+        text-align: center;
+    }
+    .top{
+        width: 100%;
+        height: 60px;
+    }
+    .bottom{
+        width: 100%;
+        height: 22px;
+        background-color: white;
+    }
+    .material-icons{
+        color: #549788;
+        position: absolute;
+        left: 20px;
+    }
+
+    .mdl-button--colored .material-icons{
+        color: white;
+    }
+    .mdl-layout__drawer-button {
+        width: 100%;
+
+    //margin: 0px;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+    //background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    //background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    //background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    }
+    .mdl-layout__content{
+        /*margin-top: 48px;*/
+    }
+    #spacer_top{
+        height: 48px;
+    }
+
+    .logo_box{
+        margin-top: 32px;
+        width: 100%;
+        display:table;
+        text-align: center;
+        margin-bottom: 52px;
+    }
+    #logo{
+        width: 150px;
+        height: 72px;
+    }
+    hr{
+        background-color: #ED242E;
+        height: 3px;
+        border: 0;
+        margin-left: 16px;
+        margin-right: 16px;
+        margin-top: 0px;
+        margin-bottom: 20px;
+
+    }
+    .mdl-button--colored{
+        position: fixed;
+        right: 10px;
+        bottom: 100px;
+    }
+    .mdl-textfield{
+        width: 100%;
+        padding: 0 0;
+        padding-bottom: 20px;
+
+    }
+    .mdl-textfield__input{
+        border-bottom-color: #B92D00;
+        border-bottom-width: 2px;
+        padding-top: 0px;
+        padding-bottom: 10px;
+    }
+    .form-inputs{
+        display:block;
+        margin:0 15;
+    }
+    .custom-footer{
+        display: none;
+    }
+    .mdl-textfield__label{
+        top: 0;
+    }
+    .mdl-js-button{
+        position: static;
+        width: 100%;
+        max-width:50em;
+        margin-bottom: 14px;
+        -webkit-tap-highlight-color: gray;
+    }
+    #sign-in{
+        background-color: white;
+        color: #B92D00;
+        border: #B92D00 solid 1px;
+    }
+    #error-console{
+        color:#B92D00;
+        margin-bottom: 70px;
+    }
+    #button-area{
+        display:table-cell;
+        text-align: center;
+    }
+    #button{
+        margin: 0 auto;
+    }
+
+    </style>
+</head>
+<body ng-controller="mainController">
+<!-- 헤더 네비게이션 바 -->
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--transparent">
+        <div class="mdl-layout__header-row">
+            <span class="mdl-layout-title">Title</span>
+            <div class="mdl-layout-spacer"></div>
+        </div>
+    </header>
+    <!-- 사이드 네비게이션 바 -->
+
+    <div class="mdl-layout__drawer">
+        <span class="mdl-layout-title">{{loginName}}</span>
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+            <a class="mdl-navigation__link" href="">Link</a>
+        </nav>
+    </div>
+    <!-- 컨텐츠영역 시작 -->
+    <main class="mdl-layout__content">
+        <!-- 헤더 네비게이션 바 크기만큼 공간 추가하는 spacer div -->
+
+        <div id = 'spacer_top' class = 'spacer'>
+        </div>
+        <!-- 로고영역 -->
+        <div class="logo_box">
+            <img id='logo' src="./images/logo.png">
+        </div>
+        <!-- 가로 선-->
+        <hr />
+        <!-- 아이디 비번 로그인 폼 -->
+        <div class="form-inputs">
+            <div class="mdl-textfield mdl-js-textfield">
+                <input ng-model="id" class="mdl-textfield__input" type="text" id="id">
+                <label class="mdl-textfield__label" for="id">아이디를 입력해주세요</label>
+            </div>
+            <div class="mdl-textfield mdl-js-textfield">
+                <input ng-model="password" class="mdl-textfield__input" type="password" id="password">
+                <label class="mdl-textfield__label" for="password">패스워드를 입력해주세요</label>
+            </div>
+            <div id="error-console" class="error">
+                사용자 이름이나 패스워드가 정확하지 않습니다.
+            </div>
+            <div class="button-area">
+                <!-- 로그인 버튼-->
+                <button ng-click="userLogin();" id = "log-in" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                    로그인하기
+                </button>
+                <!-- 가입 버튼-->
+                <button id = "sign-in" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                    가입하기
+                </button>
+            </div>
+        </div>
+    </main>
+<!--하단영역 기능키 display:none으로 숨겨놓음-->
+<footer class="custom-footer">
+    <div class="top">
+        <div class="custom-section">
+            <div class="bottom-features">
+                <image src ="./images/noun_84367_cc.png" />
+            </div>
+        </div>
+        <div class="custom-section">
+            <div class="bottom-features">
+                <image src ="./images/noun_356956_cc.png" />
+            </div>
+        </div>
+        <div class="custom-section">
+            <div class="bottom-features">
+                <image src ="./images/noun_757280_cc.png" />
+            </div>
+        </div>
+        <div class="custom-section">
+            <div class="bottom-features">
+                <image src ="./images/noun_818881_cc.png" />
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="custom-section">
+            <div class="bottom-features-text">
+                작업내역
+            </div>
+        </div>
+        <div class="custom-section">
+            <div class="bottom-features-text">
+                사진보기
+            </div>
+        </div>
+        <div class="custom-section">
+            <div class="bottom-features-text">
+                자료보기
+            </div>
+        </div>
+        <div class="custom-section">
+            <div class="bottom-features-text">
+                통계
+            </div>
+        </div>
+    </div>
+
+</footer>
+
+</div>
+<script>
+
+    var msoftApp = angular.module("msoftApp", []);
+
+    msoftApp.controller('mainController', ['$scope', '$http', function ($scope, $http){
+
+        $scope.loginName = "유무영";
+        
+        $scope.userLogin = function() {
+            var dataObject = {};
+            console.log($scope);
+            dataObject.id = $scope.id;
+            dataObject.password = $scope.password;
+            $http({
+                method: 'POST',
+                url: '/customers/login/',
+                params: dataObject,
+                headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8'}
+            })
+                .success(function (data, status, headers, config) {
+                    if (data) {
+                        var someText = {};
+                        $scope.loginName = data.name;
+                    } else {
+                        console.log("data: " + data);
+                        console.log("status: " + status);
+                        console.log("headers: " + headers);
+                        console.log("config: " + config);
+                    }
+
+                })
+                .error(function (data, status, headers, config) {
+                    console.log("data: " + data);
+                    console.log("status: " + status);
+                    console.log("headers: " + headers);
+                    console.log("config: " + config);
+                });
+        };
+    }]);
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-red.min.css">
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+	<style> <!-- 커스텀 css부분 -->
+		.demo-layout-transparent .mdl-layout__header,
+		.demo-layout-transparent .mdl-layout__drawer-button {
+			color: black;
+		}
+		.custom-footer{
+			background-color: #549788;
+			width: 100%;
+			height: 82px;
+			position: fixed;
+			bottom: 0%;
+			z-index: 999999;
+		}
+		.custom-section{
+			width: 25%;
+			display:table;
+			float: left;
+		}
+		.bottom-features{
+			display:table-cell;
+			text-align: center;
+			padding-top: 15px;
+		}
+		.bottom-features-text{
+			height: 100%;
+			color: #549788;
+			text-align: center;
+		}
+		.top{
+			width: 100%;
+			height: 60px;
+		}
+		.bottom{
+			width: 100%;
+			height: 22px;
+			background-color: white;
+		}
+		.material-icons{
+			color: #549788;
+			position: absolute;
+			left: 20px;
+		}
+
+		.mdl-button--colored .material-icons{
+			color: white;
+		}
+		.mdl-layout__drawer-button {
+			width: 100%;
+
+			//margin: 0px;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+			//background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+			//background: -webkit-linear-gradient(top, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+			//background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+		}
+		.mdl-layout__content{
+			/*margin-top: 48px;*/
+		}
+		#spacer_top{
+			height: 48px;
+		}
+
+		.logo_box{
+			margin-top: 32px;
+			width: 100%;
+			display:table;
+			text-align: center;
+			margin-bottom: 52px;
+		}
+		#logo{
+			width: 150px;
+			height: 72px;
+		}
+		hr{
+			 background-color: #ED242E;
+			 height: 3px;
+			 border: 0;
+			 margin-left: 16px;
+			 margin-right: 16px;
+			 margin-top: 0px;
+			 margin-bottom: 20px;
+
+		}
+		.mdl-textfield{
+			width: 100%;
+			padding: 0 0;
+			padding-bottom: 20px;
+
+		}
+		.mdl-textfield__input{
+			border-bottom-color: #B92D00;
+			border-bottom-width: 2px;
+			padding-top: 0px;
+			padding-bottom: 10px;
+		}
+		.form-inputs{
+			display:block;
+			margin:0 15;
+		}
+		.custom-footer{
+			display: none;
+		}
+		.mdl-textfield__label{
+			top: 0;
+		}
+		.mdl-js-button{
+			position:fixed;
+			width:162px;
+			-webkit-tap-highlight-color: gray;
+		}
+    .mdl-button--colored{
+      top:418px;
+      margin-left:120px;
+    }
+    .form-congratulation{
+      width:162px;
+      height:36px;
+      margin-top:70px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .form-congratulation-content{
+      text-indent:20px;
+      font-size: 16px;
+    }
+    .form-congratulation-button{
+      width:418px;
+      height:106px;
+      margin-top:100px;
+      margin-left:auto;
+      margin-right: auto;
+    }
+
+		#sign-in{
+			background-color: white;
+			color: #B92D00;
+			border: #B92D00 solid 1px;
+		}
+		#error-console{
+			color:#B92D00;
+			margin-bottom: 70px;
+		}
+		#button-area{
+			display:table-cell;
+			text-align: center;
+		}
+		#button{
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+<div class="demo-layout-transparent mdl-layout mdl-js-layout">
+	<!-- 컨텐츠영역 시작 -->
+	<main class="mdl-layout__content">
+		<!-- 헤더 네비게이션 바 크기만큼 공간 추가하는 spacer div -->
+		<div id = 'spacer_top' class = 'spacer'>
+		</div>
+		<!-- 로고영역 -->
+		<div class="logo_box">
+			<img id='logo' src="./images/logo.png">
+		</div>
+		<!-- 가로 선-->
+		<hr />
+    <!--축하메세지-->
+    <div class="form-congratulation">
+      <p class="form-congratulation-content" ><fontcolor="#757575">가입을 환영합니다.</p>
+      </div>
+      <!--기원 사원 가입 버튼-->
+      <div class="form-congratulation-button">
+        <button id="enterprise" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored ">기업으로 가입</button>
+        <button id="employee" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored "style="top:468px">사원으로 가입</button>
+    </div>
+		</div>
+	</main>
+	<!--하단영역 기능키 display:none으로 숨겨놓음-->
+	<footer class="custom-footer">
+		<div class="top">
+			<div class="custom-section">
+				<div class="bottom-features">
+					<image src ="./images/noun_84367_cc.png" />
+				</div>
+			</div>
+			<div class="custom-section">
+				<div class="bottom-features">
+					<image src ="./images/noun_356956_cc.png" />
+				</div>
+			</div>
+			<div class="custom-section">
+				<div class="bottom-features">
+					<image src ="./images/noun_757280_cc.png" />
+				</div>
+			</div>
+			<div class="custom-section">
+				<div class="bottom-features">
+					<image src ="./images/noun_818881_cc.png" />
+				</div>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="custom-section">
+				<div class="bottom-features-text">
+					작업내역
+				</div>
+			</div>
+			<div class="custom-section">
+				<div class="bottom-features-text">
+					사진보기
+				</div>
+			</div>
+			<div class="custom-section">
+				<div class="bottom-features-text">
+					자료보기
+				</div>
+			</div>
+			<div class="custom-section">
+				<div class="bottom-features-text">
+					통계
+				</div>
+			</div>
+		</div>
+
+	</footer>
+
+</div>
+
+</body>
+</html>
